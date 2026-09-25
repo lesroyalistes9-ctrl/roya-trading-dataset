@@ -1,0 +1,8 @@
+canonicalName,slug,status,rails,officialUrl,trustScore,onChainTier,traded,review,priceFrom,reviewReadIso
+Propr.xyz,propr,active,Hyperliquid,https://www.propr.xyz/,86.7,3,true,https://roya-trading.com/prop-firms/propr/,$25,2026-09-05
+Hypernova,hypernova,active,Hyperliquid,https://hypernova.xyz/,85.7,4,true,https://roya-trading.com/prop-firms/hypernova/,$25,2026-09-05
+Carrot Funding,carrot-funding,active,Arbitrum,https://carrotfunding.io/,73.2,,true,https://roya-trading.com/prop-firms/carrot-funding/,"$65 (2-Phase $5K — the one we bought, 10 Sep 2026)",2026-09-11
+Solana Funded,solana-funded,active,Solana,https://solanafunded.com/,69.8,,false,https://roya-trading.com/prop-firms/solana-funded/,"$61.60 (2.5K, SF30 promo) — list $88",2026-09-05
+Breakout,breakout,active,Centralized (Kraken-owned),https://www.breakoutprop.com/,69.5,,false,https://roya-trading.com/prop-firms/breakout/,$40 (5K Turbo),2026-09-05
+HyperPNL,hyperpnl,active,Hyperliquid,https://hyperpnl.com/,64.5,,true,https://roya-trading.com/prop-firms/hyperpnl/,"$42 (1-Step Flex $5K — the one we bought, 9 Sep 2026)",2026-09-09
+GT Funded,gt-funded,relaunching,On-chain (historical),,18.3,,false,https://roya-trading.com/prop-firms/gt-funded/,"$99 (10K, waitlist — not purchasable)",2026-09-05

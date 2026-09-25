@@ -1,0 +1,510 @@
+{
+  "$schema": "https://roya-trading.com/api/registry.schema.json",
+  "version": "1.3",
+  "name": "Roya Trading — Crypto Prop Firm Registry",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "CC-BY 4.0 — cite \"Roya Trading\" with a link to https://roya-trading.com/",
+  "generatedAt": "2026-09-25",
+  "gridLastReviewed": "2026-09-10",
+  "statusLastVerified": "2026-09-25",
+  "source": "https://roya-trading.com/prop-firm-graveyard/",
+  "methodology": "https://roya-trading.com/how-we-test-prop-firms/",
+  "detectionMethodology": "https://roya-trading.com/prop-firm-graveyard/methodology/",
+  "changelogUrl": "https://roya-trading.com/prop-firm-graveyard/changelog/",
+  "counter": {
+    "goneDarkSince": "2026-06",
+    "goneDark": 1,
+    "tracked": 10,
+    "asOf": "2026-09-25",
+    "permalink": "https://roya-trading.com/prop-firm-graveyard/#count"
+  },
+  "verifiedPayouts": {
+    "asOf": "2026-09-19",
+    "reconciledTotal": 54,
+    "propr": {
+      "count": 48,
+      "usdc": 7670.94,
+      "chain": "ethereum",
+      "firstIso": "2026-05-20",
+      "lastIso": "2026-09-18"
+    },
+    "hypernova": {
+      "count": 6,
+      "usdc": 1932.09,
+      "chain": "arbitrum",
+      "firstIso": "2026-08-29",
+      "lastIso": "2026-09-01",
+      "splitPct": 80
+    },
+    "methodology": "https://roya-trading.com/payouts/",
+    "dataset": "https://roya-trading.com/api/payouts.json",
+    "datasetCsv": "https://roya-trading.com/api/payouts.csv"
+  },
+  "hypernovaReserve": {
+    "usd": 604038.65,
+    "iso": "2026-09-25",
+    "chain": "arbitrum",
+    "block": 508755865,
+    "tracker": "https://roya-trading.com/hypernova-reserve-tracker/"
+  },
+  "firms": [
+    {
+      "canonicalName": "Propr.xyz",
+      "slug": "propr",
+      "aliases": [
+        "Propr",
+        "PROPR",
+        "propr xyz",
+        "Propr Trading"
+      ],
+      "officialUrl": "https://www.propr.xyz/",
+      "rails": "Hyperliquid",
+      "status": "active",
+      "trustScore": 86.7,
+      "onChainTier": 3,
+      "traded": true,
+      "identifier": {
+        "label": "Payout Distributor",
+        "address": "0x6e810d5c33a4355ce1b4107f5722787bfd7acf24",
+        "chain": "ethereum",
+        "explorer": "https://etherscan.io/address/0x6e810d5c33a4355ce1b4107f5722787bfd7acf24"
+      },
+      "review": "https://roya-trading.com/prop-firms/propr/",
+      "reviewReadIso": "2026-09-05",
+      "priceFrom": "$25",
+      "payoutsVerifiedByUs": 48,
+      "boughtByUs": true,
+      "cap": null
+    },
+    {
+      "canonicalName": "Hypernova",
+      "slug": "hypernova",
+      "aliases": [
+        "Hypernova Trading",
+        "hypernova.xyz"
+      ],
+      "officialUrl": "https://hypernova.xyz/",
+      "rails": "Hyperliquid",
+      "status": "active",
+      "trustScore": 85.7,
+      "onChainTier": 4,
+      "traded": true,
+      "identifier": {
+        "label": "Vault",
+        "address": "0x920973eebffd3bf7da14dd9fb52bd3bea1664c67",
+        "chain": "arbitrum",
+        "explorer": "https://arbiscan.io/address/0x920973eebffd3bf7da14dd9fb52bd3bea1664c67"
+      },
+      "review": "https://roya-trading.com/prop-firms/hypernova/",
+      "reviewReadIso": "2026-09-05",
+      "priceFrom": "$25",
+      "payoutsVerifiedByUs": 6,
+      "boughtByUs": true,
+      "cap": null
+    },
+    {
+      "canonicalName": "Carrot Funding",
+      "slug": "carrot-funding",
+      "aliases": [
+        "Carrot",
+        "carrotfunding.io"
+      ],
+      "officialUrl": "https://carrotfunding.io/",
+      "rails": "Arbitrum",
+      "status": "active",
+      "trustScore": 73.2,
+      "onChainTier": null,
+      "traded": true,
+      "identifier": null,
+      "review": "https://roya-trading.com/prop-firms/carrot-funding/",
+      "reviewReadIso": "2026-09-11",
+      "priceFrom": "$65 (2-Phase $5K — the one we bought, 10 Sep 2026)",
+      "payoutsVerifiedByUs": 0,
+      "boughtByUs": true,
+      "cap": null
+    },
+    {
+      "canonicalName": "Solana Funded",
+      "slug": "solana-funded",
+      "aliases": [
+        "SolanaFunded",
+        "solanafunded.com"
+      ],
+      "officialUrl": "https://solanafunded.com/",
+      "rails": "Solana",
+      "status": "active",
+      "trustScore": 69.8,
+      "onChainTier": null,
+      "traded": false,
+      "identifier": null,
+      "review": "https://roya-trading.com/prop-firms/solana-funded/",
+      "reviewReadIso": "2026-09-05",
+      "priceFrom": "$61.60 (2.5K, SF30 promo) — list $88",
+      "payoutsVerifiedByUs": 0,
+      "boughtByUs": false,
+      "cap": 85
+    },
+    {
+      "canonicalName": "Breakout",
+      "slug": "breakout",
+      "aliases": [
+        "Breakout Prop",
+        "breakoutprop.com"
+      ],
+      "officialUrl": "https://www.breakoutprop.com/",
+      "rails": "Centralized (Kraken-owned)",
+      "status": "active",
+      "trustScore": 69.5,
+      "onChainTier": null,
+      "traded": false,
+      "identifier": null,
+      "review": "https://roya-trading.com/prop-firms/breakout/",
+      "reviewReadIso": "2026-09-05",
+      "priceFrom": "$40 (5K Turbo)",
+      "payoutsVerifiedByUs": 0,
+      "boughtByUs": false,
+      "cap": 85
+    },
+    {
+      "canonicalName": "HyperPNL",
+      "slug": "hyperpnl",
+      "aliases": [
+        "Hyper PNL",
+        "hyperpnl.com"
+      ],
+      "officialUrl": "https://hyperpnl.com/",
+      "rails": "Hyperliquid",
+      "status": "active",
+      "trustScore": 64.5,
+      "onChainTier": null,
+      "traded": true,
+      "identifier": null,
+      "review": "https://roya-trading.com/prop-firms/hyperpnl/",
+      "reviewReadIso": "2026-09-09",
+      "priceFrom": "$42 (1-Step Flex $5K — the one we bought, 9 Sep 2026)",
+      "payoutsVerifiedByUs": 0,
+      "boughtByUs": true,
+      "cap": null
+    },
+    {
+      "canonicalName": "GT Funded",
+      "slug": "gt-funded",
+      "aliases": [
+        "GTFunded",
+        "GT Funded relaunch"
+      ],
+      "officialUrl": null,
+      "rails": "On-chain (historical)",
+      "status": "relaunching",
+      "trustScore": 18.3,
+      "onChainTier": null,
+      "traded": false,
+      "identifier": null,
+      "review": "https://roya-trading.com/prop-firms/gt-funded/",
+      "reviewReadIso": "2026-09-05",
+      "priceFrom": "$99 (10K, waitlist — not purchasable)",
+      "payoutsVerifiedByUs": 0,
+      "boughtByUs": false,
+      "cap": 85
+    }
+  ],
+  "trackedNotScored": [
+    {
+      "name": "DojiFunded",
+      "slug": "dojifunded",
+      "url": "https://roya-trading.com/prop-firms/dojifunded/",
+      "officialUrl": "https://dojifunded.com/",
+      "status": "active",
+      "statusLabel": "Live — not scored",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Not bought, not traded by us; no payout of ours to reconcile. On 13 September 2026 our on-chain grid gate held it (contract address published, product not yet lived); the docs became readable on 15 September 2026.",
+      "facts": [
+        "Four account types from $1K to $100K: Instant Funding (soon), 1-Step (10 % target, 6 % static max drawdown, 3 % daily), 2-Step Classic (5 % then 10 %, 6 % / 3 %), 2-Step Elite (8 % / 5 %) — docs.dojifunded.com, read 15 Sep 2026.",
+        "Execution routes through GMX and Ostium, isolated margin only, leverage 5x crypto · 10x indices · 15x forex; copy trading not allowed; no time limit, no minimum trading days — read 15 Sep 2026.",
+        "An 80 % / 90 % profit-split add-on costs +20 % of the base price; homepage claims “up to $100K funding, on-chain verification, instant payouts” — claims, not verified by us, read 15 Sep 2026."
+      ]
+    },
+    {
+      "name": "PropMarket",
+      "slug": "propmarket",
+      "url": "https://roya-trading.com/prop-firms/propmarket/",
+      "officialUrl": "https://prop.market/",
+      "status": "active",
+      "statusLabel": "Live — not scored (prediction markets)",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Prediction-market prop firm (Polymarket, Kalshi), outside our crypto-perps grid; not bought by us.",
+      "facts": [
+        "One-step evaluation from $59 one-time, account sizes $5K to $250K, 70/30 split (90 % sold as an add-on), 20 % profit target, 10 % trailing-equity max drawdown, 30-day time limit — prop.market pricing, read 15 Sep 2026.",
+        "Rules read 15 Sep 2026: markets must resolve within 60 days, price range 20–80 cents only, no single market above 10 % of total profit, first withdrawal after 7 days then every 7 days, 2 % minimum payout.",
+        "Kalshi support announced on the homepage with a 25 % promo code on 15 Sep 2026; the $250K tier was an early-access waitlist at our 10 Aug 2026 registry read."
+      ]
+    },
+    {
+      "name": "PolyFunded",
+      "slug": "polyfunded",
+      "url": "https://roya-trading.com/prop-firms/polyfunded/",
+      "officialUrl": "https://polyfunded.xyz/",
+      "status": "active",
+      "statusLabel": "Live — not scored",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Not bought, not traded; its “on-chain verified payouts” claim has not been checked by us against a published address.",
+      "facts": [
+        "Evaluations from $35, account sizes $5K to $200K, 40+ crypto pairs priced on Binance data plus a Polymarket simulation mode; profit target 10–15 %, minimum 10 trading days, no time limit — homepage read 15 Sep 2026.",
+        "Split advertised as 100 % of the first $5K profit then 90 %, bi-weekly USDC payouts, scaling to 2.5x — advertised, not verified, read 15 Sep 2026.",
+        "Registry read 10 Aug 2026: HTTP 307 → 200, its own FAQ calls the Polymarket side “simulation trading”."
+      ]
+    },
+    {
+      "name": "Vanta Trading",
+      "slug": "vanta-trading",
+      "url": "https://roya-trading.com/prop-firms/vanta-trading/",
+      "officialUrl": "https://vantatrading.io/",
+      "status": "simulated",
+      "statusLabel": "Simulated platform — not a funded account",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Vanta's own title reads “Decentralized Simulated Trading Platform”: rewards, not a funded account. Outside the grid by definition. Do not confuse with vantatrading.com, a futures education community.",
+      "facts": [
+        "One-step evaluation, 10 % target, 5 % static max drawdown, 5 % daily loss limit, unlimited trading period; tickets $9 (1K) · $49 (5K) · $79 (10K) · $169 (25K) · $319 (50K) · $599 (100K) — read 15 Sep 2026.",
+        "“100 % reward split”, weekly reward distributions, scaling “up to $2.5M” — the firm's wording, read 15 Sep 2026.",
+        "Network snapshot shown on the site on 15 Sep 2026: $12.66M “funding distributed”, 94,162 orders, 4,048 processed traders, 576 active — self-reported."
+      ]
+    },
+    {
+      "name": "Hyperstack",
+      "slug": "hyperstack",
+      "url": "https://roya-trading.com/prop-firms/hyperstack/",
+      "officialUrl": "https://www.hyperstack.trade/",
+      "status": "simulated",
+      "statusLabel": "Simulated challenge on Hyperliquid — not a funded account",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Vanta-powered “simulated scaled account”; its footer states trading is simulated and that passing does not guarantee compensation (read earlier for our Hyperliquid hub). Not a funded account, so not on the grid.",
+      "facts": [
+        "One-step challenge, 10 % profit target, 5 % max drawdown on every tier, 90 % “rewards split”, scaling “up to $400K”; you trade on your own Hyperliquid wallet and Hyperstack reads the performance — read 15 Sep 2026.",
+        "Prices read 15 Sep 2026: free $1K (200 seats), $74 (5K), $135 (10K), $309 (25K), $579 (50K), $999 (100K), 60+ pairs.",
+        "Payouts described as performance-based rewards every 30 days to participants who meet programme conditions — the firm's wording, read 15 Sep 2026."
+      ]
+    },
+    {
+      "name": "DecentralProp",
+      "slug": "decentralprop",
+      "url": "https://roya-trading.com/prop-firms/decentralprop/",
+      "officialUrl": "https://decentralprop.com/",
+      "status": "devnet",
+      "statusLabel": "Protocol on Solana devnet — nothing to buy yet",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "A launchpad for tokenised prop firms, running end to end on Solana devnet in test SOL; no real-money payout exists to verify. Roadmap, not a firm.",
+      "facts": [
+        "Homepage read 15 Sep 2026: 2 firms live on the protocol, 106 traders, $387K “lifetime payouts” and a 41-minute median payout time — all devnet transactions in test SOL, as the site itself states.",
+        "Stack stated on the site: Anchor programs, Raydium liquidity, Metaplex tokens, non-custodial treasury — read 15 Sep 2026.",
+        "Mainnet “opens September 2026” per the homepage on 15 Sep 2026; we re-check at month end."
+      ]
+    },
+    {
+      "name": "FUNDED by Foxify",
+      "slug": "foxify-funded",
+      "url": "https://roya-trading.com/prop-firms/foxify-funded/",
+      "officialUrl": "https://docs.foxify.trade/",
+      "status": "not-a-prop-firm",
+      "statusLabel": "Deposit-based funding layer — no evaluation, not on the grid",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "Not a challenge: you deposit $100–$500 of your own USDC and receive a multiplied “FUNDED” balance on a partner DEX. Different product category; not bought by us.",
+      "facts": [
+        "Accounts read 15 Sep 2026: Entry ($100 → $500), Pro ($500 → $2,500), Elite ($500 → $5,000), scaling “up to $20,000”; 80 % profit share, no KYC, no evaluation, payouts described as instant on-chain USDC.",
+        "Live on Kodiak (Berachain), what.exchange and PERPTools (Arbitrum); Hyperliquid listed as “Coming Q3 2026” — read 15 Sep 2026.",
+        "125+ markets advertised across crypto, forex, stocks, metals, commodities, indices; site stats “$1B+ volume, 40,000+ FUNDED journeys” are self-reported — read 15 Sep 2026."
+      ]
+    },
+    {
+      "name": "FundedPoly",
+      "slug": "fundedpoly",
+      "url": "https://roya-trading.com/prop-firms/fundedpoly/",
+      "officialUrl": "https://fundedpoly.com/",
+      "status": "at-risk",
+      "statusLabel": "Site paused — at risk",
+      "lastCheckedIso": "2026-09-15",
+      "whyNotScored": "The site serves a Vercel “This deployment is temporarily paused” page; there is nothing to evaluate or buy.",
+      "facts": [
+        "15 Sep 2026: page title “Deployment Paused”, body “This deployment is temporarily paused” — no product visible.",
+        "Registry reads 25 Jul and 10 Aug 2026: HTTP 402 DEPLOYMENT_DISABLED (Vercel), the firm was still advertising funded Polymarket accounts with an 80 % split and up to 3x leverage.",
+        "Status in our registry: at-risk since 10 Aug 2026; it moves to dark only after our published graveyard criteria are met."
+      ]
+    }
+  ],
+  "statusRecords": [
+    {
+      "name": "GT Funded",
+      "domain": "gtfunded.com → gtfunded.xyz",
+      "status": "relaunching",
+      "dns": "no-record",
+      "http": "gtfunded.com: no DNS (10 Aug) · gtfunded.xyz: 307 → 200 (15 Sep)",
+      "note": "The original domain has had no DNS record since June 2026 and never returned. A new site now runs on gtfunded.xyz under an 'AI-DeFi' positioning — but it is a waitlist landing page, not a working platform: the only call to action is 'Join Waitlist', there is no dashboard, and the page contradicts itself on maximum funding ($250K in the hero, $500K in the how-it-works section). It also advertises a '100% profit split' tier, which leaves no stated revenue model. Nothing on the site explains what happened to traders funded before the shutdown. Treat as unproven, not as a returning firm. Re-read 15 September 2026: still the same waitlist page ('Join 2,400+ traders on the waitlist'), counters rendered at 0.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "FundedPoly",
+      "domain": "fundedpoly.com",
+      "status": "at-risk",
+      "dns": "resolving",
+      "http": "Vercel 'Deployment Paused' page (15 Sep) · 402 DEPLOYMENT_DISABLED (25 Jul, 10 Aug)",
+      "note": "The domain resolves but the site returns HTTP 402 'Payment Required' with Vercel's DEPLOYMENT_DISABLED error — the hosting is suspended, typically for non-payment. The firm was still advertising funded Polymarket accounts with an 80% split and up to 3x leverage. Status unclear: this may be a billing lapse or the first stage of a shutdown. The same 402 was returned on 25 July and again on 10 August — the longer it lasts, the less it looks like a billing accident. Do not buy an evaluation until it is back up. Re-read 15 September 2026: the domain now serves Vercel's 'This deployment is temporarily paused' page, title 'Deployment Paused' — no product visible, seven weeks after the first 402.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "Propr",
+      "domain": "propr.xyz",
+      "status": "active",
+      "dns": "resolving",
+      "http": "308 → 200",
+      "note": "Fully operational. Published rulebook (page header v1.0, changelog last logged at v1.0.2 of 18 March 2026, read 10 September 2026), live transparency dashboard, on-chain USDC payouts. Prediction-market product announced with pricing but still waitlist-only. Homepage re-read 15 September 2026: 'get funded up to $300,000, keep 80%, paid onchain in USDC'.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "Hypernova",
+      "domain": "hypernova.xyz",
+      "status": "active",
+      "dns": "resolving",
+      "http": "200",
+      "note": "Operational and public since 14 August 2026 — checkout open on app.hypernova.xyz with published pricing ($120/$275/$365 on the 25K account; pricing unchanged across five checks through 31 August). Hyperliquid-native, with programmatic smart-contract payouts and an on-chain payout reserve. Its own documentation states up to an 80% split, not the 90% repeated on comparison sites — a split we have now reconciled first-hand: nine payouts taken on our own funded account 28–31 August 2026, the largest verified on-chain at exactly 80% to the cent. Reserve reading of 31 August 2026, 03:18 UTC: $744,569.83 on Arbitrum (vault + reserve wallet), after a $861,517.34 top-up level on 25 August; the homepage displayed a rounded $765.5K the same day — it no longer matches the chain to the cent. Homepage re-read 15 September 2026: reserve shown $958.4K, lifetime payouts $852.8K, average payout 5.9 s.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "Solana Funded",
+      "domain": "solanafunded.com",
+      "status": "active",
+      "dns": "resolving",
+      "http": "200",
+      "note": "Operational. Solana-native, meme-coin focused. The advertised ceiling is now $100K USDC with a 90% split — down from the $250K advertised in July. No shutdown signal, but a quiet halving of the headline offer is worth knowing before you buy. Homepage re-read 15 September 2026: 'Get up to $100K', tiers $2,500 to $100,000, '50,000+ traders' claimed.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "Carrot Funding",
+      "domain": "carrotfunding.io",
+      "status": "active",
+      "dns": "resolving",
+      "http": "200 (www.carrotfunding.io)",
+      "note": "Operational on carrotfunding.io — challenges from $5K to $100K live at checkout, 80% split, USDC payouts on Arbitrum with published transaction hashes. Note: carrotfunding.com (a similar domain) 302-redirects to a HugeDomains parking page; it is not their site. Our 10 August 'dead' verdict was issued against that wrong domain and corrected on 15 August — see the changelog. Separately, the advertised ceiling is now $100K, down from the $500K seen in July. Homepage re-read 15 September 2026: up, 'The Verifiable Prop Firm', Trustpilot widget showing 4.6 on 22 reviews.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "HyperPNL",
+      "domain": "hyperpnl.com",
+      "status": "active",
+      "dns": "resolving",
+      "http": "200",
+      "note": "Operational, and now documented from a paid account: on 9 September 2026 we bought a 1-Step Flex $5,000 evaluation for $42, funded it in USDC on Arbitrum and traded it the same day. Two evaluations are sold, a 1-Step Flex and a 2-Step Flex, not one. Real ceiling still $25K — $50K and $100K remain marked Soon, an eighth consecutive check, and the previously listed $200K tier is still gone. The Terms of Use, readable only once logged in, name the operator: Hyperpnl Ltd., registration CO-425378, Grand Cayman, Cayman Islands. Tracing that $42 end to end produced one on-chain event, a deposit into RelayDepository (the deposit contract of the third-party bridging protocol Relay); the fee itself was debited off-chain in HyperPNL's internal ledger, and no address is published for the Payment Router, the Payout Treasury or the Data Recorder the docs name. Homepage re-read 15 September 2026: 1-Step Flex still $42 / $86 / $215 for $5K / $10K / $25K.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "PropMarket",
+      "domain": "prop.market",
+      "status": "active",
+      "dns": "resolving",
+      "http": "200",
+      "note": "Operational since 15 May 2026. First prop firm dedicated to prediction markets, up to $250K and up to a 90% split. Note: the $250K account is early-access waitlist after passing an evaluation, not directly buyable. Homepage re-read 15 September 2026: one-step evaluation from $59, 70/30 split (90% sold as an add-on), 20% target, 10% trailing drawdown, Kalshi support announced.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "PolyFunded",
+      "domain": "polyfunded.xyz",
+      "status": "active",
+      "dns": "resolving",
+      "http": "307 → 200",
+      "note": "Operational. Covers both crypto and Polymarket, up to $200K, on-chain USDC payouts. The Polymarket side is explicitly 'simulation trading' (its own FAQ term), and crypto executes against real-time Binance prices — a demo-account model with real payouts, like most prop firms, but worth knowing. Homepage re-read 15 September 2026: evaluations from $35, $5K to $200K, '100% of first $5K profit then 90%' advertised.",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "Breakout",
+      "domain": "breakout.trade",
+      "status": "active",
+      "dns": "resolving",
+      "http": "no response to automated request · www.breakoutprop.com: 200 (15 Sep)",
+      "note": "Kraken-owned. The domain resolves but blocks automated requests, which is normal for a CEX-backed platform — not a shutdown signal. Settles off-chain on a centralised terminal. Re-read 15 September 2026 on its public site www.breakoutprop.com: up, 'Keep 80-90% of the profits', up to $200K; breakout.trade itself not re-tested that day.",
+      "checked": "2026-09-25"
+    }
+  ],
+  "changelog": [
+    {
+      "dateIso": "2026-09-19",
+      "title": "Hypernova reserve down $169,194.50 in four days: $958,399.39 (15 Sep) → $789,204.89 (19 Sep)",
+      "body": "Daily 03:00 UTC on-chain readings of Hypernova's payout reserve on Arbitrum (vault + reserve wallet): $958,399.39 on 15 September, $925,592.74 on 16 September, $870,858.82 on 17 September, $849,504.79 on 18 September, $789,204.89 on 19 September 2026 — a fall of $169,194.50, or 17.7%, in four days. The reserve wallet moved from $931,255.04 to $758,255.04 in that window; the operational vault stayed between $14K and $31K. We did not trace the destinations of the outflows and we are not reading a cause into them: a reserve that pays traders goes down when traders get paid, and it also goes down when a treasury moves money. Status unchanged: active. Every reading, with its block number, is on the reserve tracker.",
+      "proof": [
+        "https://roya-trading.com/hypernova-reserve-tracker/",
+        "https://arbiscan.io/address/0x43c5f0a81d538a527dbf35d27faa583ac7fada07",
+        "https://arbiscan.io/address/0x920973eebffd3bf7da14dd9fb52bd3bea1664c67"
+      ]
+    },
+    {
+      "dateIso": "2026-09-15",
+      "title": "Correction: three days of false 'no DNS record' readings withdrawn — full hand re-check of all 10 firms, no status change",
+      "body": "From 13 to 15 September 2026 our automated daily sweep recorded 'dns: no-record' for every tracked domain, live firms included, and that reading reached registry.json and the register table. It was false: the sites were up. The cause was our resolver call (Node's dns.resolve4, which talks to DNS servers directly) failing on the machine that runs the sweep while ordinary HTTPS requests succeeded — a tooling fault on our side, not a change at any firm. Fixed the same day: the sweep now falls back to the operating-system resolver, aborts when a known-good name fails to resolve, and refuses to write a run in which every domain came back dark. The false readings were discarded and all 10 pages were re-read by hand in a browser on 15 September 2026: no status changes. FundedPoly now serves Vercel's 'This deployment is temporarily paused' page (seven weeks after its first HTTP 402); gtfunded.xyz is still a waitlist landing page; the other eight are up. As always, no verdict moved on an automated reading.",
+      "proof": [
+        "https://roya-trading.com/api/registry.json",
+        "https://fundedpoly.com/ (Vercel 'Deployment Paused', 15 Sep 2026)",
+        "https://www.gtfunded.xyz/ (waitlist page, 15 Sep 2026)"
+      ]
+    },
+    {
+      "dateIso": "2026-09-02",
+      "title": "Full registry re-verification — all 10 firms re-checked, no status change",
+      "body": "Full DNS + HTTP + manual page re-check of the 10 tracked crypto prop firms, closing the gap since the 10 August verification (the daily automated monitoring ran throughout; this entry publishes it). No status change: GT Funded remains dark on its original domain with a waitlist landing on gtfunded.xyz, FundedPoly still serves HTTP 402 DEPLOYMENT_DISABLED, everyone else resolves and responds. Also folded into the record: the two Hypernova reserve readings below, which our internal log carried but this public changelog had not yet published.",
+      "proof": [
+        "https://roya-trading.com/api/registry.json"
+      ]
+    },
+    {
+      "dateIso": "2026-08-31",
+      "title": "Hypernova reserve read at $744,569.83 — down $116,947.51 in six days, including a round $128,000 outflow",
+      "body": "On-chain reading of 31 August 2026, 03:18 UTC: Hypernova's payout reserve stands at $744,569.83 on Arbitrum (vault $27,174.79 + reserve wallet $717,395.03), down $116,947.51 from the 25 August top-up level. The reserve wallet's outflow includes an exactly round 128,000.00 USDC movement, which reads like a treasury operation rather than payout flow; we did not trace its destination. Over the same window the site's lifetime-payouts counter rose $108.4K, which accounts for most of the fall but not all of it (~$8.5K untraced). The homepage displayed $765.5K for a reserve the chain puts at $744.6K.",
+      "proof": [
+        "https://arbiscan.io/address/0x43c5f0a81d538a527dbf35d27faa583ac7fada07",
+        "https://arbiscan.io/address/0x920973eebffd3bf7da14dd9fb52bd3bea1664c67"
+      ]
+    },
+    {
+      "dateIso": "2026-08-25",
+      "title": "Hypernova reserve topped up to $861,517.34 — up ~$117K on the 17 August reading",
+      "body": "On-chain reading of 25 August 2026: Hypernova's payout reserve stands at $861,517.34 on Arbitrum (Vault + reserve wallet), up from $744,562.56 on 17 August — a top-up of roughly $117K. Status unchanged: active. Recorded here because a reserve that moves both ways, with dated readings, is the whole point of tracking it on-chain rather than trusting a homepage counter.",
+      "proof": [
+        "https://arbiscan.io/address/0x43c5f0a81d538a527dbf35d27faa583ac7fada07",
+        "https://arbiscan.io/address/0x920973eebffd3bf7da14dd9fb52bd3bea1664c67"
+      ]
+    },
+    {
+      "dateIso": "2026-08-15",
+      "title": "Correction: Carrot Funding reclassified active — our 10 Aug 'dead' verdict checked the wrong domain",
+      "body": "On 10 August we classified Carrot Funding dead because carrotfunding.com 302-redirects to a HugeDomains parking page. That was the wrong domain: the firm brands itself carrotfunding.io and is fully operational there — challenge checkout live ($5K to $100K), 80% split, USDC payouts on Arbitrum with published transaction hashes. Status corrected to active, checked 15 August 2026. Two lessons enter the methodology: a death verdict must name the exact domain checked, and we search a firm's socials and docs for alternative official domains before classifying. Separately noted: Carrot's advertised ceiling is now $100K, down from the $500K seen in July, with no announcement.",
+      "proof": [
+        "https://www.carrotfunding.io/",
+        "https://carrotfunding.com/ (parked, HugeDomains — not their site)"
+      ]
+    },
+    {
+      "dateIso": "2026-08-15",
+      "title": "Hypernova re-checked: public launch announced 14 August, reserve read at $746,229.76",
+      "body": "Full re-check of Hypernova. On 14 August 2026 its founder announced the public launch: the invite-only beta is over and the checkout is open on app.hypernova.xyz, with pricing published ($120/$275/$365 on the 25K account, read 16 August 2026). Our on-chain reading of its payout reserve on Arbitrum: $746,229.76 (Vault + reserve wallet), down about $24.3K in a week; the homepage's rounded ~$750.9K counter no longer matches the chain to the cent. Status unchanged: active.",
+      "proof": [
+        "https://arbiscan.io/address/0x43c5f0a81d538a527dbf35d27faa583ac7fada07",
+        "https://arbiscan.io/address/0x920973eebffd3bf7da14dd9fb52bd3bea1664c67",
+        "https://hypernova.xyz/"
+      ]
+    },
+    {
+      "dateIso": "2026-08-10",
+      "title": "Full registry re-check: GT Funded reclassified relaunching (unproven), FundedPoly still 402",
+      "body": "Second dated pass over all tracked firms. GT Funded: the original gtfunded.com has had no DNS record since June 2026; a new site on gtfunded.xyz is a waitlist landing page whose own figures contradict each other ($250K in the hero, $500K in the how-it-works, plus a '100% profit split' tier with no stated revenue model) — reclassified from dead to relaunching (unproven), which still counts as gone dark: the platform that took traders' money no longer exists and nothing addresses their accounts. FundedPoly: fundedpoly.com returned HTTP 402 DEPLOYMENT_DISABLED (Vercel) on 25 July and again on 10 August — at risk. Solana Funded and HyperPNL re-checked active with quietly reduced offers (ceiling $100K vs $250K advertised in July; $200K tier removed, respectively).",
+      "proof": [
+        "gtfunded.com — DNS: no record (checked 2026-08-10)",
+        "https://gtfunded.xyz/",
+        "fundedpoly.com — HTTP 402 DEPLOYMENT_DISABLED (checked 2026-07-25 and 2026-08-10)"
+      ]
+    },
+    {
+      "dateIso": "2026-07-25",
+      "title": "Registry opened: 10 crypto prop firms under dated DNS/HTTP monitoring",
+      "body": "First dated checks recorded for the crypto prop firm status registry: every tracked firm — living ones included — gets DNS resolution, HTTP status and a manual read of the live page, each check dated. GT Funded entered as dead: all its domains stopped resolving in June 2026 with no statement and no wind-down for funded traders. The registry's rule from day one: no firm is marked dead on a rumour, and no past verdict is ever silently edited.",
+      "proof": [
+        "gtfunded.com — DNS: no record since June 2026"
+      ]
+    }
+  ]
+}

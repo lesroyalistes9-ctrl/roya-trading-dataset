@@ -1,0 +1,9 @@
+Fetched from the live endpoints with curl (HTTP 200 each) on 2026-09-25T12:12:43Z.
+
+  https://roya-trading.com/api/registry.json         31562 bytes  generatedAt 2026-09-25, gridLastReviewed 2026-09-10, statusLastVerified 2026-09-25
+  https://roya-trading.com/api/registry.csv           1271 bytes
+  https://roya-trading.com/api/registry.schema.json  12252 bytes
+  https://roya-trading.com/api/payouts.json          42436 bytes  generatedAt 2026-09-25, readIso 2026-09-19, 54 transactions
+  https://roya-trading.com/api/payouts.csv           13962 bytes
+
+These copies are snapshots. The endpoints above are regenerated at every deploy of roya-trading.com; when they differ from these files, the endpoints win.

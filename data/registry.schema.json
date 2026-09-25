@@ -1,0 +1,510 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://roya-trading.com/api/registry.schema.json",
+  "title": "Roya Trading — Crypto Prop Firm Registry",
+  "description": "JSON Schema of https://roya-trading.com/api/registry.json, derived at build from the generated file (generated 2026-09-25). License CC-BY 4.0.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of this schema."
+    },
+    "version": {
+      "type": "string",
+      "description": "Registry format version (semver-ish string)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Dataset name."
+    },
+    "license": {
+      "type": "string",
+      "format": "uri",
+      "description": "License URL — CC-BY 4.0."
+    },
+    "attribution": {
+      "type": "string",
+      "description": "How to attribute reuse."
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Build date (YYYY-MM-DD). The file is regenerated at every deploy."
+    },
+    "gridLastReviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the Trust Score grid was last revised (YYYY-MM-DD)."
+    },
+    "statusLastVerified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the status registry (DNS/HTTP) was last verified (YYYY-MM-DD)."
+    },
+    "source": {
+      "type": "string",
+      "format": "uri",
+      "description": "Human-readable page of the status registry."
+    },
+    "methodology": {
+      "type": "string",
+      "format": "uri",
+      "description": "How firms are tested and scored."
+    },
+    "detectionMethodology": {
+      "type": "string",
+      "format": "uri",
+      "description": "How a firm is declared dark."
+    },
+    "changelogUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Registry changelog page."
+    },
+    "counter": {
+      "type": "object",
+      "properties": {
+        "goneDarkSince": {
+          "type": "string"
+        },
+        "goneDark": {
+          "type": "integer"
+        },
+        "tracked": {
+          "type": "integer"
+        },
+        "asOf": {
+          "type": "string",
+          "format": "date"
+        },
+        "permalink": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "goneDarkSince",
+        "goneDark",
+        "tracked",
+        "asOf",
+        "permalink"
+      ],
+      "additionalProperties": false,
+      "description": "Headline number: tracked crypto prop firms gone dark since goneDarkSince, with a permanent anchor."
+    },
+    "verifiedPayouts": {
+      "type": "object",
+      "properties": {
+        "asOf": {
+          "type": "string",
+          "format": "date"
+        },
+        "reconciledTotal": {
+          "type": "integer"
+        },
+        "propr": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "usdc": {
+              "type": "number"
+            },
+            "chain": {
+              "type": "string"
+            },
+            "firstIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "lastIso": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "count",
+            "usdc",
+            "chain",
+            "firstIso",
+            "lastIso"
+          ],
+          "additionalProperties": false
+        },
+        "hypernova": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "usdc": {
+              "type": "number"
+            },
+            "chain": {
+              "type": "string"
+            },
+            "firstIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "lastIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "splitPct": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "count",
+            "usdc",
+            "chain",
+            "firstIso",
+            "lastIso",
+            "splitPct"
+          ],
+          "additionalProperties": false
+        },
+        "methodology": {
+          "type": "string",
+          "format": "uri"
+        },
+        "dataset": {
+          "type": "string",
+          "format": "uri"
+        },
+        "datasetCsv": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "asOf",
+        "reconciledTotal",
+        "propr",
+        "hypernova",
+        "methodology",
+        "dataset",
+        "datasetCsv"
+      ],
+      "additionalProperties": false,
+      "description": "Receipts reconciled by us on our own accounts (counts, totals, first/last block day). Transaction-level data: `dataset`."
+    },
+    "hypernovaReserve": {
+      "type": "object",
+      "properties": {
+        "usd": {
+          "type": "number"
+        },
+        "iso": {
+          "type": "string",
+          "format": "date"
+        },
+        "chain": {
+          "type": "string"
+        },
+        "block": {
+          "type": "integer"
+        },
+        "tracker": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "usd",
+        "iso",
+        "chain",
+        "block",
+        "tracker"
+      ],
+      "additionalProperties": false,
+      "description": "Latest dated on-chain reading of Hypernova's payout reserve (USD), with the Arbitrum block when it came from the automated RPC read."
+    },
+    "firms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "canonicalName": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "officialUrl": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rails": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "trustScore": {
+            "type": "number"
+          },
+          "onChainTier": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "traded": {
+            "type": "boolean"
+          },
+          "identifier": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "string"
+                  },
+                  "chain": {
+                    "type": "string"
+                  },
+                  "explorer": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "label",
+                  "address",
+                  "chain",
+                  "explorer"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "review": {
+            "type": "string",
+            "format": "uri"
+          },
+          "reviewReadIso": {
+            "type": "string",
+            "format": "date"
+          },
+          "priceFrom": {
+            "type": "string"
+          },
+          "payoutsVerifiedByUs": {
+            "type": "integer"
+          },
+          "boughtByUs": {
+            "type": "boolean"
+          },
+          "cap": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "canonicalName",
+          "slug",
+          "aliases",
+          "officialUrl",
+          "rails",
+          "status",
+          "trustScore",
+          "onChainTier",
+          "traded",
+          "identifier",
+          "review",
+          "reviewReadIso",
+          "priceFrom",
+          "payoutsVerifiedByUs",
+          "boughtByUs",
+          "cap"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Every scored firm: Trust Score, on-chain tier, status, identifiers, review URL, read dates."
+    },
+    "trackedNotScored": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Dataset name."
+          },
+          "slug": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "officialUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "status": {
+            "type": "string"
+          },
+          "statusLabel": {
+            "type": "string"
+          },
+          "lastCheckedIso": {
+            "type": "string",
+            "format": "date"
+          },
+          "whyNotScored": {
+            "type": "string"
+          },
+          "facts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "slug",
+          "url",
+          "officialUrl",
+          "status",
+          "statusLabel",
+          "lastCheckedIso",
+          "whyNotScored",
+          "facts"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Entities monitored without a score (not bought, not a funded account, devnet, paused), with dated facts."
+    },
+    "statusRecords": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Dataset name."
+          },
+          "domain": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "dns": {
+            "type": "string"
+          },
+          "http": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "checked": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "name",
+          "domain",
+          "status",
+          "dns",
+          "http",
+          "note",
+          "checked"
+        ],
+        "additionalProperties": false
+      },
+      "description": "DNS/HTTP status per tracked firm, with the note and the date of the check."
+    },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dateIso": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "proof": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "dateIso",
+          "title",
+          "body",
+          "proof"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Append-only registry changelog entries."
+    }
+  },
+  "required": [
+    "$schema",
+    "version",
+    "name",
+    "license",
+    "attribution",
+    "generatedAt",
+    "gridLastReviewed",
+    "statusLastVerified",
+    "source",
+    "methodology",
+    "detectionMethodology",
+    "changelogUrl",
+    "counter",
+    "verifiedPayouts",
+    "hypernovaReserve",
+    "firms",
+    "trackedNotScored",
+    "statusRecords",
+    "changelog"
+  ],
+  "additionalProperties": false
+}
