@@ -1,0 +1,41 @@
+{
+  "title": "Crypto Prop Firm Registry and Verified Payouts — Roya Trading (snapshot 2026-09-25)",
+  "upload_type": "dataset",
+  "version": "1.3",
+  "publication_date": "2026-09-25",
+  "creators": [
+    { "name": "Roya Trading" }
+  ],
+  "description": "<p>Dated, machine-readable registry of crypto / on-chain proprietary trading firms maintained by Roya Trading: 7 scored firms (public Trust Score grid, last reviewed 2026-09-10), 8 entities tracked without a score, 10 DNS/HTTP status records (last verified 2026-09-25), an append-only changelog, and a headline counter (1 of 10 tracked firms gone dark since 2026-06, as of 2026-09-25).</p><p>Companion file: 54 prop-firm payouts received on Roya Trading's own accounts and reconciled on a public blockchain to the cent (48 Propr.xyz on Ethereum, 6 Hypernova on Arbitrum; read 2026-09-19), each with its transaction hash.</p><p>Every figure carries its read date. The files are regenerated at every deploy of roya-trading.com; this record is a dated snapshot. Detection rules: https://roya-trading.com/prop-firm-graveyard/methodology/ — Scoring grid: https://roya-trading.com/how-we-test-prop-firms/ — Affiliate disclosure: https://roya-trading.com/about/</p>",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "prop firm",
+    "proprietary trading",
+    "crypto",
+    "on-chain",
+    "Hyperliquid",
+    "Arbitrum",
+    "Ethereum",
+    "payouts",
+    "USDC",
+    "registry",
+    "trust score",
+    "DeFi"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    { "identifier": "https://roya-trading.com/api/registry.json", "relation": "isDerivedFrom", "resource_type": "dataset" },
+    { "identifier": "https://roya-trading.com/api/registry.csv", "relation": "isDerivedFrom", "resource_type": "dataset" },
+    { "identifier": "https://roya-trading.com/api/registry.schema.json", "relation": "isDescribedBy", "resource_type": "other" },
+    { "identifier": "https://roya-trading.com/api/payouts.json", "relation": "isDerivedFrom", "resource_type": "dataset" },
+    { "identifier": "https://roya-trading.com/api/payouts.csv", "relation": "isDerivedFrom", "resource_type": "dataset" },
+    { "identifier": "https://roya-trading.com/prop-firm-graveyard/", "relation": "isSupplementTo", "resource_type": "publication-other" },
+    { "identifier": "https://roya-trading.com/prop-firm-graveyard/methodology/", "relation": "isDocumentedBy", "resource_type": "publication-other" },
+    { "identifier": "https://roya-trading.com/prop-firm-graveyard/changelog/", "relation": "isDocumentedBy", "resource_type": "publication-other" },
+    { "identifier": "https://roya-trading.com/payouts/", "relation": "isSupplementTo", "resource_type": "publication-other" },
+    { "identifier": "https://roya-trading.com/how-we-test-prop-firms/", "relation": "isDocumentedBy", "resource_type": "publication-other" },
+    { "identifier": "https://roya-trading.com/", "relation": "isPublishedBy", "resource_type": "other" }
+  ],
+  "notes": "Snapshot fetched 2026-09-25T12:12:43Z (see data/READ_AT.txt). No affiliate links, no private wallet addresses: firm identifiers are the firms' own published contract/payout addresses. Roya Trading receives an affiliate commission from Propr.xyz, Hypernova and Carrot Funding on sign-ups through its site links; scores and statuses are not for sale."
+}
