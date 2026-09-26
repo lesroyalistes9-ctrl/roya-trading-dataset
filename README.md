@@ -101,12 +101,13 @@ BibTeX:
   year         = {2026},
   version      = {1.3},
   note         = {Snapshot of 2026-09-25; regenerated at every deploy. CC-BY 4.0.},
+  doi = {10.5281/zenodo.22971098},
   howpublished = {\url{https://roya-trading.com/api/registry.json}},
   url          = {https://roya-trading.com/api/registry.json}
 }
 ```
 
-Add the Zenodo DOI to both blocks once the first release is archived (see `zenodo.json`).
+Zenodo DOI (v1.3, published 2026-09-26): https://doi.org/10.5281/zenodo.22971098 — concept DOI for all versions: https://doi.org/10.5281/zenodo.22971097. Hugging Face mirror: https://huggingface.co/datasets/roya0327/crypto-prop-firm-registry
 
 ## Changelog
 
