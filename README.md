@@ -2,26 +2,26 @@
 
 A dated, machine-readable registry of crypto / on-chain proprietary trading firms, maintained by [Roya Trading](https://roya-trading.com/), plus the transaction-level list of every prop-firm payout Roya Trading received on its own accounts and reconciled on a public blockchain.
 
-Snapshot in this repository: fetched **2026-09-25T12:12:43Z** from the live endpoints (see `data/READ_AT.txt`). The live endpoints are regenerated at every deploy of roya-trading.com; when they differ from the files here, the endpoints win.
+Snapshot in this repository: generated **2026-11-01** (registry format v1.5) from the same data modules the site renders (see `data/READ_AT.txt`). The live endpoints are regenerated at every deploy of roya-trading.com; when they differ from the files here, the endpoints win.
 
 | File | What it is | Live source |
 | --- | --- | --- |
-| `data/registry.json` | Full registry: 7 scored firms, 8 tracked-but-not-scored entities, 10 DNS/HTTP status records, append-only changelog (9 entries), headline counters | https://roya-trading.com/api/registry.json |
-| `data/registry.csv` | Flat mirror of the 7 scored firms (11 columns) | https://roya-trading.com/api/registry.csv |
+| `data/registry.json` | Full registry: 11 scored firms (with `rank` and six sub-scores), 8 tracked-but-not-scored entities, 14 DNS/HTTP status records, append-only changelog (10 entries), the scoring grid, headline counters | https://roya-trading.com/api/registry.json |
+| `data/registry.csv` | Flat mirror of the 11 scored firms (18 columns) | https://roya-trading.com/api/registry.csv |
 | `data/registry.schema.json` | JSON Schema (draft-07) of `registry.json` | https://roya-trading.com/api/registry.schema.json |
-| `data/payouts.json` | 54 payout transactions received by Roya Trading's own accounts (48 Propr.xyz on Ethereum, 6 Hypernova on Arbitrum), each with its tx hash, plus 10 dated aggregate entries | https://roya-trading.com/api/payouts.json |
-| `data/payouts.csv` | Flat mirror of the 54 transactions (12 columns) | https://roya-trading.com/api/payouts.csv |
+| `data/payouts.json` | 102 on-chain payout transfers received by Roya Trading's own accounts, each with its tx hash, plus the off-chain (Rise) receipts they settle and 24 dated aggregate entries | https://roya-trading.com/api/payouts.json |
+| `data/payouts.csv` | Flat mirror of the 102 transfers (12 columns) | https://roya-trading.com/api/payouts.csv |
 
 Human-readable pages behind the data: [status registry / graveyard](https://roya-trading.com/prop-firm-graveyard/), [detection methodology](https://roya-trading.com/prop-firm-graveyard/methodology/), [changelog](https://roya-trading.com/prop-firm-graveyard/changelog/), [scoring methodology](https://roya-trading.com/how-we-test-prop-firms/), [verified payouts](https://roya-trading.com/payouts/), [llms.txt](https://roya-trading.com/llms.txt).
 
 ## Headline figures in this snapshot (each with its read date)
 
-- Registry version 1.3, `generatedAt` 2026-09-25, Trust Score grid last reviewed 2026-09-10, statuses last verified 2026-09-25.
-- 7 scored firms (Propr.xyz 86.7, Hypernova 85.7, Carrot Funding 73.2, Solana Funded 69.8, Breakout 69.5, HyperPNL 64.5, GT Funded 18.3 — Trust Score /100, `reviewReadIso` 2026-09-05 to 2026-09-11 per firm). 4 of the 7 were bought and traded by Roya Trading (`boughtByUs: true`).
+- Registry version 1.5, `generatedAt` 2026-11-01, Trust Score grid last reviewed 2026-10-29 (six criteria, Roya's note the one subjective criterion), statuses last verified 2026-11-01.
+- 11 scored firms, in rank order (Propr.xyz 85.8, Hypernova 83.4, Bungee Funded Perps 78.6, MyFundedPerps 75.7, Vest Markets 73.0, Cashed 71.8, Solana Funded 64.2, Carrot Funding 64.1, Breakout 62.0, HyperPNL 56.3, GT Funded 13.3 — Trust Score /100, `reviewReadIso` 2026-09-05 to 2026-11-01 per firm). 6 of the 11 were bought and traded by Roya Trading (`boughtByUs: true`).
 - 8 entities tracked without a score (DojiFunded, PropMarket, PolyFunded, Vanta Trading, Hyperstack, DecentralProp, FUNDED by Foxify, FundedPoly), each with a `whyNotScored` and dated facts (last checked 2026-09-15).
-- Counter: 1 of 10 tracked firms gone dark since 2026-06 (`asOf` 2026-09-25).
-- Verified payouts: 54 transactions reconciled on-chain (`asOf` 2026-09-19): 48 Propr.xyz payouts on Ethereum totalling 7,670.94 USDC (2026-05-20 to 2026-09-18) and 6 Hypernova payouts on Arbitrum totalling 1,932.09 USDC (2026-08-29 to 2026-09-01), all at an 80 % split.
-- Hypernova payout reserve: $604,038.65 read on Arbitrum at block 508755865 on 2026-09-25.
+- Counter: 1 of 14 tracked firms gone dark since 2026-06 (`asOf` 2026-11-01).
+- Verified payouts (`asOf` 2026-11-01): **104 payouts received** from 4 firms, **26,941.72 USDC received on-chain** in 102 reconciled transfers — 81 Propr.xyz payouts on Ethereum (16,503.52 USDC, 2026-05-20 to 2026-10-30), 11 Hypernova payouts on Arbitrum (3,660.86 USDC, 2026-08-28 to 2026-09-01), 1 Vest Markets payout on Arbitrum (11.26 USDC, 2026-10-11), 11 MyFundedPerps payouts credited on Rise (6,775.08 USD) and withdrawn on-chain as 6,766.08 USDC on Arbitrum in 9 transfers. Per-transaction amounts in `payouts.json` are exact (6 decimals); totals are rounded to the cent.
+- Hypernova payout reserve: $803,744.37 read on Arbitrum at block 520188496 on 2026-11-01.
 
 ## Fields of `registry.json` (from `registry.schema.json`)
 
@@ -41,21 +41,22 @@ Top level:
 | `methodology` | uri | How firms are tested and scored |
 | `detectionMethodology` | uri | How a firm is declared dark |
 | `changelogUrl` | uri | Registry changelog page |
+| `grid` | object | `revisedIso`, `criteria[]` (`key`, `label`, `weight`, `scale`, `subjective`), `formula`, `subjectiveNote`, `deskResearchCap` — recompute any `trustScore` from `subScores` |
 | `counter` | object | `goneDarkSince`, `goneDark`, `tracked`, `asOf`, `permalink` — headline number with a permanent anchor |
-| `verifiedPayouts` | object | `asOf`, `reconciledTotal`, `propr{count,usdc,chain,firstIso,lastIso}`, `hypernova{…,splitPct}`, `methodology`, `dataset`, `datasetCsv` |
+| `verifiedPayouts` | object | `asOf`, `reconciledTotal` (on-chain transfers), `receivedTotal` (payouts, any rail), `receivedUsdcOnchain` (v1.5, to the cent), `payingFirms`, `propr`/`hypernova`/`vestMarkets` `{count,usdc,chain,firstIso,lastIso[,splitPct]}`, `myfundedperps{…}`, `methodology`, `dataset`, `datasetCsv` |
 | `hypernovaReserve` | object | `usd`, `iso`, `chain`, `block`, `tracker` — latest dated on-chain reading of Hypernova's payout reserve |
 | `firms[]` | array | Every scored firm (see below) |
 | `trackedNotScored[]` | array | `name`, `slug`, `url`, `officialUrl`, `status`, `statusLabel`, `lastCheckedIso`, `whyNotScored`, `facts[]` |
 | `statusRecords[]` | array | `name`, `domain`, `status`, `dns`, `http`, `note`, `checked` — DNS/HTTP status per tracked firm |
 | `changelog[]` | array | `dateIso`, `title`, `body`, `proof[]` — append-only entries |
 
-`firms[]` items: `canonicalName`, `slug`, `aliases[]`, `officialUrl`, `rails`, `status`, `trustScore` (number /100), `onChainTier` (integer or null), `traded` (boolean), `identifier` (object `{label, address, chain, explorer}` or null — a firm's *published* contract/payout address, never a private wallet), `review` (uri), `reviewReadIso` (date), `priceFrom` (string), `payoutsVerifiedByUs` (integer), `boughtByUs` (boolean), `cap` (nullable).
+`firms[]` items (in rank order): `canonicalName`, `slug`, `aliases[]`, `officialUrl`, `rails`, `status`, `trustScore` (number /100), `rank` (integer, v1.5), `subScores` (object, v1.4), `onChainTier` (integer or null), `traded` (boolean), `identifier` (object `{label, address, chain, explorer}` or null — a firm's *published* contract/payout address, never a private wallet), `review` (uri), `reviewReadIso` (date), `priceFrom` (string), `payoutsVerifiedByUs` (integer, on-chain transfers), `payoutsReceivedByUs` (integer, any rail), `boughtByUs` (boolean), `cap` (nullable).
 
-`registry.csv` columns: `canonicalName, slug, status, rails, officialUrl, trustScore, onChainTier, traded, review, priceFrom, reviewReadIso`.
+`registry.csv` columns: `canonicalName, slug, status, rails, officialUrl, trustScore, onChainTier, traded, review, priceFrom, reviewReadIso, sub_rules, sub_payouts, sub_survival, sub_freedom, sub_value, sub_roya, rank` (`sub_*` = the six sub-scores; `trustScore` printed with one decimal).
 
 ## Fields of `payouts.json` / `payouts.csv`
 
-Top level of `payouts.json`: `version`, `name`, `license`, `attribution`, `generatedAt`, `readIso`, `method`, `source`, `counts{reconciledTotal, propr, hypernova}`, `totals{proprReceivedUsdc, hypernovaReceivedUsdc}`, `transactions[]` (54), `entries[]` (10 dated aggregate claims with their own `method` and `anchor`).
+Top level of `payouts.json`: `version`, `name`, `license`, `attribution`, `generatedAt`, `readIso`, `method`, `source`, `counts{…}`, `totals{…}` (aggregates, to the cent), `transactions[]` (102, exact amounts), `offChainReceipts[]` (11 Rise credits, each pointing to the transfer that settled it), `entries[]` (24 dated aggregate claims with their own `method` and `anchor`).
 
 `transactions[]` / CSV columns: `firm, slug, dateIso, blockTimeUtc, requestedUsd, receivedUsdc, splitPct, chain, txHash, explorerUrl, method, readIso` (JSON adds `account`, a label of the receiving account, never a wallet address).
 
@@ -67,7 +68,7 @@ Top level of `payouts.json`: `version`, `name`, `license`, `attribution`, `gener
 - **Payouts**: only transfers to Roya Trading's own accounts, each matched on-chain to the cent; counts are set by a human after reconciliation, never by a script.
 - **Hypernova reserve**: USDC balance of the published vault + reserve wallet on Arbitrum, read daily at a stated block.
 - **Trust Scores**: public grid (https://roya-trading.com/how-we-test-prop-firms/), sub-scores recomputable; scores move only on a dated grid revision, by hand.
-- Affiliate disclosure: Propr.xyz, Hypernova and Carrot Funding pay Roya Trading an affiliate commission on sign-ups through its links (https://roya-trading.com/about/). Scores and statuses are not for sale; this dataset contains no affiliate links.
+- Affiliate disclosure: some of the listed firms pay Roya Trading an affiliate commission on sign-ups through links published on its site (current list and terms: https://roya-trading.com/about/). Scores and statuses are not for sale; this dataset contains no affiliate links.
 
 ## Update cadence (from `docs/daily-refresh.md` of the site)
 
@@ -90,7 +91,7 @@ Attribution line to use: **CC-BY 4.0 — cite "Roya Trading" with a link to http
 
 APA:
 
-> Roya Trading. (2026). *Crypto Prop Firm Registry and Verified Payouts (dataset, version 1.3, snapshot 2026-09-25)* [Data set]. https://roya-trading.com/api/registry.json
+> Roya Trading. (2026). *Crypto Prop Firm Registry and Verified Payouts (dataset, version 1.5, snapshot 2026-11-01)* [Data set]. https://roya-trading.com/api/registry.json
 
 BibTeX:
 
@@ -99,19 +100,19 @@ BibTeX:
   author       = {{Roya Trading}},
   title        = {Crypto Prop Firm Registry and Verified Payouts (dataset)},
   year         = {2026},
-  version      = {1.3},
-  note         = {Snapshot of 2026-09-25; regenerated at every deploy. CC-BY 4.0.},
-  doi = {10.5281/zenodo.22971098},
+  version      = {1.5},
+  note         = {Snapshot of 2026-11-01; regenerated at every deploy. CC-BY 4.0.},
+  doi = {10.5281/zenodo.22971097},
   howpublished = {\url{https://roya-trading.com/api/registry.json}},
   url          = {https://roya-trading.com/api/registry.json}
 }
 ```
 
-Zenodo DOI (v1.3, published 2026-09-26): https://doi.org/10.5281/zenodo.22971098 — concept DOI for all versions: https://doi.org/10.5281/zenodo.22971097. Hugging Face mirror: https://huggingface.co/datasets/roya0327/crypto-prop-firm-registry
+Zenodo concept DOI (resolves to the latest version): https://doi.org/10.5281/zenodo.22971097 — v1.5 (snapshot 2026-11-01): https://doi.org/10.5281/zenodo.23863863; v1.3 (snapshot 2026-09-25): https://doi.org/10.5281/zenodo.22971098. Hugging Face mirror: https://huggingface.co/datasets/roya0327/crypto-prop-firm-registry
 
 ## Changelog
 
-The registry changelog is append-only and lives in `registry.json` → `changelog[]` and at https://roya-trading.com/prop-firm-graveyard/changelog/ (RSS available from that page). Format changes of the file itself are listed in the site's field-by-field specification (`docs/registry-json.md`, v1.0 → v1.2 on 2026-09-15; the live file reports v1.3).
+The registry changelog is append-only and lives in `registry.json` → `changelog[]` and at https://roya-trading.com/prop-firm-graveyard/changelog/ (RSS available from that page). Format changes of the file itself are listed in the site's field-by-field specification (`docs/registry-json.md`): v1.3 (2026-09-25) payouts dataset; v1.4 (2026-10-16) scoring grid + sub-scores, six criteria; v1.5 (2026-11-01) per-firm `rank`, `receivedUsdcOnchain`, totals to the cent. This snapshot is v1.5.
 
 ## What this dataset is not
 
