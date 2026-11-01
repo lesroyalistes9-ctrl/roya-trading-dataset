@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://roya-trading.com/api/registry.schema.json",
   "title": "Roya Trading — Crypto Prop Firm Registry",
-  "description": "JSON Schema of https://roya-trading.com/api/registry.json, derived at build from the generated file (generated 2026-09-25). License CC-BY 4.0.",
+  "description": "JSON Schema of https://roya-trading.com/api/registry.json, derived at build from the generated file (generated 2026-11-01). License CC-BY 4.0.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -61,6 +61,64 @@
       "type": "string",
       "format": "uri",
       "description": "Registry changelog page."
+    },
+    "grid": {
+      "type": "object",
+      "properties": {
+        "revisedIso": {
+          "type": "string",
+          "format": "date"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer"
+              },
+              "scale": {
+                "type": "integer"
+              },
+              "subjective": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "key",
+              "label",
+              "weight",
+              "scale",
+              "subjective"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "formula": {
+          "type": "string"
+        },
+        "subjectiveNote": {
+          "type": "string"
+        },
+        "deskResearchCap": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "revisedIso",
+        "criteria",
+        "formula",
+        "subjectiveNote",
+        "deskResearchCap"
+      ],
+      "additionalProperties": false,
+      "description": "v1.4 — the Trust Score grid: criteria (key, label, weight in points out of 100, scale of the sub-score, subjective flag), the formula, the desk-research cap. Roya's note is the one subjective criterion."
     },
     "counter": {
       "type": "object",
@@ -167,6 +225,175 @@
           ],
           "additionalProperties": false
         },
+        "vestMarkets": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "usdc": {
+              "type": "number"
+            },
+            "chain": {
+              "type": "string"
+            },
+            "firstIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "lastIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "splitPct": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "count",
+            "usdc",
+            "chain",
+            "firstIso",
+            "lastIso",
+            "splitPct"
+          ],
+          "additionalProperties": false
+        },
+        "receivedTotal": {
+          "type": "integer"
+        },
+        "receivedUsdcOnchain": {
+          "type": "number"
+        },
+        "payingFirms": {
+          "type": "integer"
+        },
+        "myfundedperps": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "usdCreditedOnRise": {
+              "type": "number"
+            },
+            "usdcReceived": {
+              "type": "number"
+            },
+            "riseFeeUsd": {
+              "type": "integer"
+            },
+            "rail": {
+              "type": "string"
+            },
+            "onChain": {
+              "type": "boolean"
+            },
+            "onChainTransfers": {
+              "type": "integer"
+            },
+            "chain": {
+              "type": "string"
+            },
+            "txHash": {
+              "type": "string"
+            },
+            "blockTimeUtc": {
+              "type": "string"
+            },
+            "explorer": {
+              "type": "string",
+              "format": "uri"
+            },
+            "payIso": {
+              "type": "string",
+              "format": "date"
+            },
+            "payoutId": {
+              "type": "string"
+            },
+            "lastCertificateId": {
+              "type": "string"
+            },
+            "payoutsOnChain": {
+              "type": "integer"
+            },
+            "usdSettledOnChain": {
+              "type": "number"
+            },
+            "payoutsStillOnRise": {
+              "type": "integer"
+            },
+            "usdStillOnRise": {
+              "type": "integer"
+            },
+            "receipts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "usd": {
+                    "type": "number"
+                  },
+                  "payIso": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "payoutId": {
+                    "type": "string"
+                  },
+                  "txHash": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "usd",
+                  "payIso",
+                  "payoutId",
+                  "txHash"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "txHashes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "riseFeesUsd": {
+              "type": "integer"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "count",
+            "usdCreditedOnRise",
+            "usdcReceived",
+            "riseFeeUsd",
+            "rail",
+            "onChain",
+            "onChainTransfers",
+            "chain",
+            "txHash",
+            "blockTimeUtc",
+            "explorer",
+            "payIso",
+            "payoutId",
+            "lastCertificateId",
+            "payoutsOnChain",
+            "usdSettledOnChain",
+            "payoutsStillOnRise",
+            "usdStillOnRise",
+            "receipts",
+            "txHashes",
+            "riseFeesUsd",
+            "note"
+          ],
+          "additionalProperties": false
+        },
         "methodology": {
           "type": "string",
           "format": "uri"
@@ -185,6 +412,11 @@
         "reconciledTotal",
         "propr",
         "hypernova",
+        "vestMarkets",
+        "receivedTotal",
+        "receivedUsdcOnchain",
+        "payingFirms",
+        "myfundedperps",
         "methodology",
         "dataset",
         "datasetCsv"
@@ -260,6 +492,41 @@
           "trustScore": {
             "type": "number"
           },
+          "rank": {
+            "type": "integer"
+          },
+          "subScores": {
+            "type": "object",
+            "properties": {
+              "rules": {
+                "type": "integer"
+              },
+              "payouts": {
+                "type": "integer"
+              },
+              "survival": {
+                "type": "integer"
+              },
+              "freedom": {
+                "type": "integer"
+              },
+              "value": {
+                "type": "integer"
+              },
+              "roya": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "rules",
+              "payouts",
+              "survival",
+              "freedom",
+              "value",
+              "roya"
+            ],
+            "additionalProperties": false
+          },
           "onChainTier": {
             "anyOf": [
               {
@@ -319,6 +586,9 @@
           "payoutsVerifiedByUs": {
             "type": "integer"
           },
+          "payoutsReceivedByUs": {
+            "type": "integer"
+          },
           "boughtByUs": {
             "type": "boolean"
           },
@@ -341,6 +611,8 @@
           "rails",
           "status",
           "trustScore",
+          "rank",
+          "subScores",
           "onChainTier",
           "traded",
           "identifier",
@@ -348,6 +620,7 @@
           "reviewReadIso",
           "priceFrom",
           "payoutsVerifiedByUs",
+          "payoutsReceivedByUs",
           "boughtByUs",
           "cap"
         ],
@@ -498,6 +771,7 @@
     "methodology",
     "detectionMethodology",
     "changelogUrl",
+    "grid",
     "counter",
     "verifiedPayouts",
     "hypernovaReserve",

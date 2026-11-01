@@ -1,8 +1,12 @@
-canonicalName,slug,status,rails,officialUrl,trustScore,onChainTier,traded,review,priceFrom,reviewReadIso
-Propr.xyz,propr,active,Hyperliquid,https://www.propr.xyz/,86.7,3,true,https://roya-trading.com/prop-firms/propr/,$25,2026-09-05
-Hypernova,hypernova,active,Hyperliquid,https://hypernova.xyz/,85.7,4,true,https://roya-trading.com/prop-firms/hypernova/,$25,2026-09-05
-Carrot Funding,carrot-funding,active,Arbitrum,https://carrotfunding.io/,73.2,,true,https://roya-trading.com/prop-firms/carrot-funding/,"$65 (2-Phase $5K — the one we bought, 10 Sep 2026)",2026-09-11
-Solana Funded,solana-funded,active,Solana,https://solanafunded.com/,69.8,,false,https://roya-trading.com/prop-firms/solana-funded/,"$61.60 (2.5K, SF30 promo) — list $88",2026-09-05
-Breakout,breakout,active,Centralized (Kraken-owned),https://www.breakoutprop.com/,69.5,,false,https://roya-trading.com/prop-firms/breakout/,$40 (5K Turbo),2026-09-05
-HyperPNL,hyperpnl,active,Hyperliquid,https://hyperpnl.com/,64.5,,true,https://roya-trading.com/prop-firms/hyperpnl/,"$42 (1-Step Flex $5K — the one we bought, 9 Sep 2026)",2026-09-09
-GT Funded,gt-funded,relaunching,On-chain (historical),,18.3,,false,https://roya-trading.com/prop-firms/gt-funded/,"$99 (10K, waitlist — not purchasable)",2026-09-05
+canonicalName,slug,status,rails,officialUrl,trustScore,onChainTier,traded,review,priceFrom,reviewReadIso,sub_rules,sub_payouts,sub_survival,sub_freedom,sub_value,sub_roya,rank
+Propr.xyz,propr,active,Hyperliquid,https://www.propr.xyz/,85.8,3,true,https://roya-trading.com/prop-firms/propr/,$25,2026-09-05,91,88,82,95,82,20,1
+Hypernova,hypernova,active,Hyperliquid,https://hypernova.xyz/,83.4,4,true,https://roya-trading.com/prop-firms/hypernova/,$25,2026-09-05,82,96,80,80,88,19,2
+Bungee Funded Perps,bungee,active,"Centralized (simulated accounts, venue not named — Hyperliquid implicit) · USDC payouts on Base",https://www.bungee.exchange/funded-perps,78.6,,false,https://roya-trading.com/prop-firms/bungee/,"$45 (Turbo $10K, list price before any code)",2026-10-24,70,78,64,62,82,25,3
+MyFundedPerps,myfundedperps,active,Centralized (simulated execution on Binance / Hyperliquid reference prices) · payouts via Rise,https://myfundedperpetuals.com/,75.7,,true,https://roya-trading.com/prop-firms/myfundedperps/,"$49 (Elite 5K with the 3% daily loss, list price before any code)",2026-11-01,72,72,58,78,74,23,4
+Vest Markets,vest-markets,active,Centralized (Vest exchange) · USDC withdrawals on Base / Arbitrum,https://next.vestmarkets.com/,73.0,,true,https://roya-trading.com/prop-firms/vest-markets/,"$40 (1-Step $5K, default config — $38 paid with a pre-filled code worth the same as ROYA, 8 Oct 2026)",2026-10-11,80,70,76,72,84,16,5
+Cashed,cashed,active,Centralized (simulated execution at Hyperliquid prices + prediction markets) · USDC payouts on BNB Smart Chain (BEP-20),https://www.cashed.fun/,71.8,,false,https://roya-trading.com/prop-firms/cashed/,"$5 (the deposit is the price: any amount from $5 to $1,000)",2026-10-17,75,58,45,80,84,22,6
+Solana Funded,solana-funded,active,Solana,https://solanafunded.com/,64.2,,false,https://roya-trading.com/prop-firms/solana-funded/,"$61.60 (2.5K, SF30 promo) — list $88",2026-09-05,62,75,65,68,82,12,7
+Carrot Funding,carrot-funding,active,Arbitrum,https://carrotfunding.io/,64.1,,true,https://roya-trading.com/prop-firms/carrot-funding/,"$65 (2-Phase $5K — the one we bought, 10 Sep 2026)",2026-09-11,78,82,55,66,82,9,8
+Breakout,breakout,active,Centralized (Kraken-owned),https://www.breakoutprop.com/,62.0,,false,https://roya-trading.com/prop-firms/breakout/,$40 (5K Turbo),2026-09-05,72,55,85,60,78,10,9
+HyperPNL,hyperpnl,active,Hyperliquid,https://hyperpnl.com/,56.3,,true,https://roya-trading.com/prop-firms/hyperpnl/,"$42 (1-Step Flex $5K — the one we bought, 9 Sep 2026)",2026-09-09,68,60,62,74,60,8,10
+GT Funded,gt-funded,relaunching,On-chain (historical),,13.3,,false,https://roya-trading.com/prop-firms/gt-funded/,"$99 (10K, waitlist — not purchasable)",2026-09-05,20,10,5,40,25,0,11
